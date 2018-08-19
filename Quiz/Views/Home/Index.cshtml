@@ -1,0 +1,13 @@
+﻿@model Quiz.Models.User
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("CreateUser", "Home"))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control"})
+            </div>
+            <button type="submit" class="btn btn-primary">Create quiz</button>
+        }
+    </div>
+</div>
