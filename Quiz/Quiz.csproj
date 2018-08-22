@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201808080900561_createScoreTable.Designer.cs">
       <DependentUpon>201808080900561_createScoreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808211528163_MakingUsernameRequired.cs" />
+    <Compile Include="Migrations\201808211528163_MakingUsernameRequired.Designer.cs">
+      <DependentUpon>201808211528163_MakingUsernameRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Question.cs" />
@@ -300,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808080900561_createScoreTable.resx">
       <DependentUpon>201808080900561_createScoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808211528163_MakingUsernameRequired.resx">
+      <DependentUpon>201808211528163_MakingUsernameRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
