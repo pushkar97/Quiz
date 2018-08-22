@@ -28,6 +28,11 @@ namespace Quiz.Controllers
         [HttpPost]
         public ActionResult CreateUser(User user)
         {
+            if (!ModelState.IsValid)
+            {
+                var obj = new User();
+                return View("Index",obj);
+            }
             _context.Users.Add(user);
             _context.SaveChanges();
             return RedirectToAction("CreateQuiz", new { uid = user.Id});
