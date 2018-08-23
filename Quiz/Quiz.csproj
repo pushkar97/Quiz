@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201808211528163_MakingUsernameRequired.Designer.cs">
       <DependentUpon>201808211528163_MakingUsernameRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808230950240_addingUserIdToScore.cs" />
+    <Compile Include="Migrations\201808230950240_addingUserIdToScore.Designer.cs">
+      <DependentUpon>201808230950240_addingUserIdToScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Question.cs" />
@@ -216,6 +220,7 @@
     <Compile Include="Models\UserAns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\CreateQuizViewModel.cs" />
+    <Compile Include="ViewModel\EnterQuizViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Database.mdf" />
@@ -277,6 +282,8 @@
     <Content Include="Views\Home\CreateUser.cshtml" />
     <Content Include="Views\Home\CreateQuiz.cshtml" />
     <Content Include="Views\Home\QuizCreated.cshtml" />
+    <Content Include="Views\Home\HowMuchDoYouKnow.cshtml" />
+    <Content Include="Views\Home\EnterQuiz.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -307,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808211528163_MakingUsernameRequired.resx">
       <DependentUpon>201808211528163_MakingUsernameRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808230950240_addingUserIdToScore.resx">
+      <DependentUpon>201808230950240_addingUserIdToScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

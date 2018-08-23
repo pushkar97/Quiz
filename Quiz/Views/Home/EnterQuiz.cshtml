@@ -1,0 +1,27 @@
+﻿@using Quiz.Models
+@model Quiz.ViewModel.EnterQuizViewModel
+@{
+    ViewBag.Title = "EnterQuiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EnterQuiz</h2>
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("EnterQuiz", "Home"))
+        {
+            <div class="form-group">
+                <h3>@string.Format(Model.Question.question, ((User)Session["User"]).Username)</h3>
+                @Html.RadioButtonFor(m => m.Answer, Model.Question.option1, new { @Id = "option1" })
+                <label for="option1">@Model.Question.option1</label>
+
+                @Html.RadioButtonFor(m => m.Answer, Model.Question.option2, new { @Id = "option2" })
+                <label for="option2">@Model.Question.option2</label>
+
+            </div>
+            @Html.HiddenFor(m => m.Question.Id)
+            <button type="submit" class="btn btn-primary">next</button>
+
+        }
+    </div>
+</div>
